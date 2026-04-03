@@ -1,11 +1,10 @@
-Markdown
-# AutoFetal-7: 3D Fetal Brain Volumetry & Z-Score Engine
+Markdown# AutoFetal-7: 3D Fetal Brain Volumetry & Z-Score Engine
 
 **Clinical-grade nnU-Net v2 pipeline for automated 7-class fetal brain segmentation and gestational-age-conditioned Z-score reporting.**
 
 Validated for gestational ages **22.6–33.0 weeks**. This tool provides automated volumetric analysis and normative comparisons to aid in the quantitative assessment of fetal neurodevelopment.
 
-![AutoFetal-7 Segmentation Sample](figures/progress%20(3).jpg)
+![AutoFetal-7 Segmentation Sample](figures/Harvard_Test_case_Final.jpg)
 
 ---
 
@@ -21,56 +20,9 @@ Ensure you have `conda` or `pip` installed. Clone the repository and install the
 git clone [https://github.com/DrVox100/AutoFetal7-nnUNet.git](https://github.com/DrVox100/AutoFetal7-nnUNet.git)
 cd AutoFetal7-nnUNet
 pip install -r requirements.txt
-2. Download Model Weights (Zenodo)
-The trained nnU-Net v2 weights (244 MB) are hosted securely on Zenodo to ensure academic traceability.
-
-Download DOI: https://doi.org/10.5281/zenodo.19398110
-
-Setup: Unzip the folder. The engine expects the standard nnU-Net directory structure: Dataset501_FetalBrain/nnUNetTrainer__nnUNetPlans__3d_fullres/fold_0/.
-
-3. Running Inference
-The pipeline is fully vectorized and executes via the inference.py wrapper. This script handles NIfTI loading, nnU-Net prediction, and automated Z-score calculation against Harvard CRL normative baselines.
-
-Bash
-python inference.py \
+2. Download Model Weights (Zenodo)The trained nnU-Net v2 weights (244 MB) are hosted securely on Zenodo to ensure academic traceability.Download DOI: https://doi.org/10.5281/zenodo.19398110Setup: Unzip the folder. The engine expects the standard nnU-Net directory structure: Dataset501_FetalBrain/nnUNetTrainer__nnUNetPlans__3d_fullres/fold_0/.3. Running InferenceThe pipeline is fully vectorized and executes via the inference.py wrapper. This script handles NIfTI loading, nnU-Net prediction, and automated Z-score calculation against Harvard CRL normative baselines.Bashpython inference.py \
   --input /path/to/raw_nifti_folder \
   --output /path/to/save/results \
   --weights /path/to/unzipped/AutoFetal7_Weights \
   --ga 28.5
-4. Segmented Anatomical Classes
-The model outputs a multi-label NIfTI mask with the following label indices:
-
-eCSF (Extra-axial Cerebrospinal Fluid)
-
-Cortical Gray Matter
-
-White Matter (including Developmental Zones)
-
-Ventricles and Cavum
-
-Cerebellum
-
-Deep Gray Matter (incl. Ganglionic Eminence)
-
-Brainstem
-
-5. Performance Metrics
-Validated on a held-out Zurich cohort (N=16) and the Fidon SBA Atlas.
-
-Mean Dice Similarity Coefficient (DSC): 0.828
-
-Top Performance: Ventricles (DSC 0.94)
-
-Metric Details: See metrics/dice score.txt for per-class breakdown.
-
-Citations
-If you use this tool in your research, please cite:
-
-nnU-Net: Isensee, F., et al. (2021). Nature Methods.
-
-FeTA Dataset: Payette, K., et al. (2024).
-
-Normative Atlas: Gholipour, A., et al. (2017). Scientific Reports.
-
-License
-Apache 2.0. Developed by Dr. Abbu J, MD.
+4. Segmented Anatomical ClassesThe model outputs a multi-label NIfTI mask with the following label indices:eCSF (Extra-axial Cerebrospinal Fluid)Cortical Gray MatterWhite Matter (including Developmental Zones)Ventricles and CavumCerebellumDeep Gray Matter (incl. Ganglionic Eminence)Brainstem5. Performance MetricsValidated on a held-out Zurich cohort ($N=16$) and the Fidon SBA Atlas.Mean Dice Similarity Coefficient (DSC): 0.828Top Performance: Ventricles (DSC 0.94)Metric Details: See metrics/dice score.txt for per-class breakdown.CitationsIf you use this tool in your research, please cite:nnU-Net: Isensee, F., et al. (2021). Nature Methods.FeTA Dataset: Payette, K., et al. (2024).Normative Atlas: Gholipour, A., et al. (2017). Scientific Reports.LicenseApache 2.0. Developed by Dr. Abbu J, MD.
