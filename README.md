@@ -31,10 +31,10 @@ Setup: Unzip the folder. The engine expects the standard nnU-Net directory struc
 3. Running Inference
 The pipeline is fully vectorized and executes via the inference.py wrapper. This script handles NIfTI loading, nnU-Net prediction, and automated Z-score calculation against Harvard CRL normative baselines.
 ```bash
-python inference.py \
-  --input /path/to/raw_nifti_folder \
-  --output /path/to/save/results \
-  --weights /path/to/unzipped/AutoFetal7_Weights \
+!python /content/AutoFetal7-nnUNet/inference.py \
+  --input /content/input_mri \
+  --output /content/output_results \
+  --weights /content/AutoFetal7_Weights \
   --ga 28.5
 ```
 4. Segmented Anatomical Classes
