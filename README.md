@@ -51,7 +51,8 @@ python inference.py \
 
    6 Deep Gray Matter
 
+   7 Brainstem
+
 License
 Apache 2.0. Open for clinical research and validation.
 
-    Brainstem
