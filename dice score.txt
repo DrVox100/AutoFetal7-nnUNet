@@ -1,0 +1,68 @@
+2026-03-30 12:25:11,024 - [ZEUS V9.0] - Initializing Zeus V11.0 (Zurich Internal Validation)...
+2026-03-30 12:25:11,432 - [ZEUS V9.0] - Metadata source: /workspace/data/participants.tsv
+2026-03-30 12:25:11,445 - [ZEUS V9.0] - GA resolver ready: 240 subjects, GA range [20.0 – 34.8] weeks
+2026-03-30 12:25:11,447 - [ZEUS V9.0] - Found 16 prediction masks in validation
+2026-03-30 12:25:11,516 - [ZEUS V9.0] - Locked 16 valid validation cases for processing
+2026-03-30 12:25:11,517 - [ZEUS V9.0] - --- Case 1/16 ---
+2026-03-30 12:25:11,517 - [ZEUS V9.0] - Processing FETA_003 [GA: 27.40 wks]
+2026-03-30 12:26:21,653 - [ZEUS V9.0] -   Done: Mean DSC=0.8798, Ventricle Z=-1.63
+2026-03-30 12:26:21,655 - [ZEUS V9.0] - --- Case 2/16 ---
+2026-03-30 12:26:21,656 - [ZEUS V9.0] - Processing FETA_005 [GA: 22.60 wks]
+2026-03-30 12:26:57,289 - [ZEUS V9.0] -   Done: Mean DSC=0.8636, Ventricle Z=1.87
+2026-03-30 12:26:57,291 - [ZEUS V9.0] - --- Case 3/16 ---
+2026-03-30 12:26:57,291 - [ZEUS V9.0] - Processing FETA_007 [GA: 22.80 wks]
+2026-03-30 12:27:33,268 - [ZEUS V9.0] -   Done: Mean DSC=0.8839, Ventricle Z=6.32
+2026-03-30 12:27:33,269 - [ZEUS V9.0] - --- Case 4/16 ---
+2026-03-30 12:27:33,270 - [ZEUS V9.0] - Processing FETA_014 [GA: 26.70 wks]
+2026-03-30 12:28:08,375 - [ZEUS V9.0] -   Done: Mean DSC=0.8882, Ventricle Z=4.73
+2026-03-30 12:28:08,377 - [ZEUS V9.0] - --- Case 5/16 ---
+2026-03-30 12:28:08,377 - [ZEUS V9.0] - Processing FETA_021 [GA: 26.10 wks]
+2026-03-30 12:28:46,167 - [ZEUS V9.0] -   Done: Mean DSC=0.8771, Ventricle Z=-2.02
+2026-03-30 12:28:46,168 - [ZEUS V9.0] - --- Case 6/16 ---
+2026-03-30 12:28:46,168 - [ZEUS V9.0] - Processing FETA_026 [GA: 27.80 wks]
+2026-03-30 12:29:26,484 - [ZEUS V9.0] -   Done: Mean DSC=0.8641, Ventricle Z=-0.04
+2026-03-30 12:29:26,485 - [ZEUS V9.0] - --- Case 7/16 ---
+2026-03-30 12:29:26,485 - [ZEUS V9.0] - Processing FETA_029 [GA: 32.50 wks]
+2026-03-30 12:30:08,892 - [ZEUS V9.0] -   Done: Mean DSC=0.8743, Ventricle Z=-1.04
+2026-03-30 12:30:08,894 - [ZEUS V9.0] - --- Case 8/16 ---
+2026-03-30 12:30:08,894 - [ZEUS V9.0] - Processing FETA_046 [GA: 23.90 wks]
+2026-03-30 12:30:51,838 - [ZEUS V9.0] -   Done: Mean DSC=0.8712, Ventricle Z=9.92
+2026-03-30 12:30:51,839 - [ZEUS V9.0] - --- Case 9/16 ---
+2026-03-30 12:30:51,840 - [ZEUS V9.0] - Processing FETA_049 [GA: 31.10 wks]
+2026-03-30 12:31:34,499 - [ZEUS V9.0] -   Done: Mean DSC=0.7249, Ventricle Z=23.42
+2026-03-30 12:31:34,500 - [ZEUS V9.0] - --- Case 10/16 ---
+2026-03-30 12:31:34,500 - [ZEUS V9.0] - Processing FETA_053 [GA: 30.30 wks]
+2026-03-30 12:32:12,366 - [ZEUS V9.0] -   Done: Mean DSC=0.881, Ventricle Z=2.84
+2026-03-30 12:32:12,367 - [ZEUS V9.0] - --- Case 11/16 ---
+2026-03-30 12:32:12,368 - [ZEUS V9.0] - Processing FETA_055 [GA: 27.10 wks]
+2026-03-30 12:32:45,152 - [ZEUS V9.0] -   Done: Mean DSC=0.8808, Ventricle Z=6.34
+2026-03-30 12:32:45,153 - [ZEUS V9.0] - --- Case 12/16 ---
+2026-03-30 12:32:45,153 - [ZEUS V9.0] - Processing FETA_061 [GA: 33.00 wks]
+2026-03-30 12:33:21,701 - [ZEUS V9.0] -   Done: Mean DSC=0.6729, Ventricle Z=-2.42
+2026-03-30 12:33:21,703 - [ZEUS V9.0] - --- Case 13/16 ---
+2026-03-30 12:33:21,703 - [ZEUS V9.0] - Processing FETA_062 [GA: 24.40 wks]
+2026-03-30 12:34:04,504 - [ZEUS V9.0] -   Done: Mean DSC=0.8882, Ventricle Z=2.03
+2026-03-30 12:34:04,505 - [ZEUS V9.0] - --- Case 14/16 ---
+2026-03-30 12:34:04,506 - [ZEUS V9.0] - Processing FETA_069 [GA: 27.40 wks]
+2026-03-30 12:34:46,631 - [ZEUS V9.0] -   Done: Mean DSC=0.8671, Ventricle Z=7.88
+2026-03-30 12:34:46,632 - [ZEUS V9.0] - --- Case 15/16 ---
+2026-03-30 12:34:46,632 - [ZEUS V9.0] - Processing FETA_074 [GA: 23.30 wks]
+2026-03-30 12:35:25,546 - [ZEUS V9.0] -   Done: Mean DSC=0.6894, Ventricle Z=2.1
+2026-03-30 12:35:25,547 - [ZEUS V9.0] - --- Case 16/16 ---
+2026-03-30 12:35:25,547 - [ZEUS V9.0] - Processing FETA_077 [GA: 26.90 wks]
+2026-03-30 12:36:02,767 - [ZEUS V9.0] -   Done: Mean DSC=0.6537, Ventricle Z=1.51
+2026-03-30 12:36:02,776 - [ZEUS V9.0] - Master CSV saved: ESPNR_Zurich_V11_Validation_Report_1774873511.csv
+2026-03-30 12:36:02,777 - [ZEUS V9.0] - ============================================================
+2026-03-30 12:36:02,777 - [ZEUS V9.0] - COHORT SUMMARY
+2026-03-30 12:36:02,778 - [ZEUS V9.0] -   Cases processed: 16
+2026-03-30 12:36:02,779 - [ZEUS V9.0] -   GA range: 22.6 – 33.0 weeks
+2026-03-30 12:36:02,779 - [ZEUS V9.0] -   Mean Dice (all classes): 0.8288 ± 0.0870
+2026-03-30 12:36:02,780 - [ZEUS V9.0] -   eCSF            DSC: 0.7415 ± 0.2655 (n=16)
+2026-03-30 12:36:02,781 - [ZEUS V9.0] -   Cortex          DSC: 0.7108 ± 0.1104 (n=16)
+2026-03-30 12:36:02,782 - [ZEUS V9.0] -   White Matter    DSC: 0.9066 ± 0.0561 (n=16)
+2026-03-30 12:36:02,783 - [ZEUS V9.0] -   Ventricles      DSC: 0.8703 ± 0.0383 (n=16)
+2026-03-30 12:36:02,783 - [ZEUS V9.0] -   Cerebellum      DSC: 0.8683 ± 0.1042 (n=16)
+2026-03-30 12:36:02,784 - [ZEUS V9.0] -   Deep GM         DSC: 0.8689 ± 0.0503 (n=16)
+2026-03-30 12:36:02,785 - [ZEUS V9.0] -   Brainstem       DSC: 0.8348 ± 0.0994 (n=16)
+2026-03-30 12:36:02,785 - [ZEUS V9.0] - ============================================================
+2026-03-30 12:36:02,786 - [ZEUS V9.0] - ZEUS V11 COMPLETE. All outputs in: ESPNR_Zurich_Validation_V11_1774873511
