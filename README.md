@@ -10,7 +10,7 @@ Validated for gestational ages 22.6–33.0 weeks. This tool provides automated v
 ## 1. Installation
 Clone the repository and install the strict environment dependencies:
 ```bash
-git clone [https://github.com/DrVox100/AutoFetal7-nnUNet.git](https://github.com/YOUR_GITHUB_USERNAME/AutoFetal7-nnUNet.git)
+git clone [https://github.com/DrVox100/AutoFetal7-nnUNet.git](https://github.com/DrVox100/AutoFetal7-nnUNet.git)
 cd AutoFetal7-nnUNet
 pip install -r requirements.txt
 
