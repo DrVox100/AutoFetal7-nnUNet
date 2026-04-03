@@ -21,7 +21,7 @@ Because NIfTI (`.nii.gz`) conversion strips DICOM metadata, the AutoFetal-7 pipe
 
 *Failure to provide an accurate GA will result in mathematically invalid Z-scores.*
 
-## 📊 Automated Clinical Reporting
+## 📊 Automated Reporting (Only for research)
 The pipeline does not just output NIfTI masks. Upon successful inference, it automatically executes a volumetric parcellation and generates a deployment-ready clinical dashboard.
 
 **Outputs generated in your `--output` folder:**
@@ -132,3 +132,5 @@ Pathological Atlas: Fidon, L., et al. (2021).
 
 7. License
 Apache 2.0. Developed by Dr. Abbu J, MD.
+
+Disclaimer : This tool is only built for research purposes now to address the gap and should not be used as sole clinical tool for management of patients. 
