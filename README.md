@@ -1,10 +1,11 @@
-Markdown# AutoFetal-7: 3D Fetal Brain Volumetry & Z-Score Engine
+
+# AutoFetal-7: 3D Fetal Brain Volumetry & Z-Score Engine
 
 **Clinical-grade nnU-Net v2 pipeline for automated 7-class fetal brain segmentation and gestational-age-conditioned Z-score reporting.**
 
 Validated for gestational ages **22.6–33.0 weeks**. This tool provides automated volumetric analysis and normative comparisons to aid in the quantitative assessment of fetal neurodevelopment.
 
-![AutoFetal-7 Segmentation Sample](figures/Harvard_Test_case_Final.jpg)
+![AutoFetal-7 Segmentation Sample](Harvard_Test_case_Final.jpg)
 
 ---
 
