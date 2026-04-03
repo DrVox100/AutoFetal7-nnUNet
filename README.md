@@ -48,12 +48,32 @@ Setup: Unzip the folder. The engine expects the standard nnU-Net directory struc
 
 3. Running Inference
 The pipeline is fully vectorized and executes via the inference.py wrapper. This script handles NIfTI loading, nnU-Net prediction, and automated Z-score calculation against Harvard CRL normative baselines.
+
+## ⚠️ CRITICAL: Weights Directory Structure
+The most common error users encounter is a `FileNotFoundError` for `dataset.json`. The nnU-Net v2 framework is extremely rigid and requires your downloaded Zenodo weights to be arranged in a specific nested folder structure.
+
+Before running the inference script, ensure your weights directory looks **exactly** like this:
+
+Any_Folder_Name/  <--- THIS is the path you pass to the --weights flag
+└── Dataset501_FetalBrain/
+    └── nnUNetTrainer__nnUNetPlans__3d_fullres/
+        ├── fold_0/
+        ├── dataset.json
+        └── plans.json
+
+
+## 🚀 Quick Start Execution
+
+Once your weights are correctly positioned, run the pipeline using the command below. 
+
+**Critical Flag:** The `--ga` flag must be a decimal float representing the Gestational Age in weeks (e.g., `28.5` corresponds to 28 weeks and 3-4 days). Do not pass a string or range.
+```
 ```bash
-!python /content/AutoFetal7-nnUNet/inference.py \
-  --input /content/input_mri \
-  --output /content/output_results \
-  --weights /content/AutoFetal7_Weights \
-  --ga 28.5
+python inference.py \
+  --input /path/to/your/input_mri \
+  --output /path/to/your/output_results \
+  --weights /path/to/parent_folder_of_Dataset501 \
+  --ga 28.5  # <--- REPLACE THIS NUMBER WITH YOUR PATIENT'S EXACT GA
 ```
 4. Segmented Anatomical Classes
 The model outputs a multi-label NIfTI mask with the following label indices:
