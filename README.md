@@ -1,6 +1,6 @@
 # AutoFetal-7: 3D Fetal Brain Volumetry & Z-Score Engine
 
-**Clinical-grade nnU-Net v2 pipeline for automated 7-class fetal brain segmentation and gestational-age-conditioned Z-score reporting.**
+**Translational research nnU-Net v2 pipeline for automated 7-class fetal brain segmentation and gestational-age-conditioned Z-score reporting.**
 
 Validated for gestational ages **22.6–33.0 weeks**. This tool provides automated volumetric analysis and normative comparisons to aid in the quantitative assessment of fetal neurodevelopment.
 
@@ -8,7 +8,7 @@ Validated for gestational ages **22.6–33.0 weeks**. This tool provides automat
 
 ---
 
-## ⚠️ CLINICAL DEPLOYMENT GUARDRAIL
+## ⚠️ DEPLOYMENT GUARDRAIL
 > **DOMAIN SHIFT WARNING:** AutoFetal-7 was trained exclusively on GE 1.5T/3T acquisition data (FeTA 2024). Application to non-GE platforms (e.g., Siemens 3T) will result in systematic underestimation of **Brainstem** (mean Z = -2.91) and **Cerebellum** (mean Z = -2.24) volumes. Do not use these specific Z-scores for clinical decision-making in heterogeneous environments without local scanner calibration.
 
 ---
@@ -45,6 +45,6 @@ The engine expects the standard nnU-Net directory structure: Dataset501_FetalBra
    
 5. Performance Metrics Validated on a held-out Zurich cohort (N=16) and the Fidon SBA Atlas.Mean Dice Similarity can be Seen in dice score.txt for per-class breakdown.
 
-6. Citations: If you use this tool in your research, please cite:nnU-Net: Isensee, F., et al. (2021). Nature Methods.FeTA Dataset: Payette, K., et al. (2024).Normative Atlas: Gholipour, A., et al. (2017). Scientific Reports.
+6. Citations: If you use this tool in your research, please cite:nnU-Net: Isensee, F., et al. (2021). Nature Methods.FeTA Dataset: Payette, K., et al. (2024).Normative Atlas: Gholipour, A., et al. (2017). Scientific Reports, Fidon et al. (2021).
 
 7. LicenseApache 2.0. Developed by Dr. Abbu J, MD.
