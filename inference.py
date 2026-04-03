@@ -16,7 +16,7 @@ logging.basicConfig(
 
 class AutoFetalInference:
     """
-    Production-grade pipeline for 7-class fetal brain volumetry and Z-score reporting.
+    Translational-grade pipeline for 7-class fetal brain volumetry and Z-score reporting.
     """
     def __init__(self, input_dir: Path, output_dir: Path, weights_dir: Path):
         self.input_dir = Path(input_dir)
@@ -54,6 +54,10 @@ class AutoFetalInference:
         """Executes the nnU-Net v2 prediction via subprocess."""
         logging.info("Initiating nnU-Net v2 Inference...")
         
+        # THIS IS THE FIX: Tell nnU-Net exactly where your Zenodo weights are
+        custom_env = os.environ.copy()
+        custom_env["nnUNet_results"] = str(self.weights_dir)
+        
         cmd = [
             "nnUNetv2_predict",
             "-i", str(self.input_dir),
@@ -64,7 +68,7 @@ class AutoFetalInference:
         ]
         
         try:
-            subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            subprocess.run(cmd, env=custom_env, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             logging.info("Segmentation masks generated successfully.")
         except subprocess.CalledProcessError as e:
             logging.error(f"nnU-Net prediction failed: {e.stderr.decode('utf-8')}")
@@ -122,7 +126,6 @@ class AutoFetalInference:
     def _get_expected_volume(self, class_name: str, ga: float) -> float:
         """
         Calculates expected normative volume (mm^3) based on Harvard CRL quadratic fits.
-        Equation: V(t) = at^2 + bt + c
         """
         if class_name == "eCSF":
             return (-340.27 * (ga**2)) + (24558.44 * ga) - 344143.06
