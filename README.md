@@ -1,4 +1,3 @@
-
 # AutoFetal-7: 3D Fetal Brain Volumetry & Z-Score Engine
 
 **Clinical-grade nnU-Net v2 pipeline for automated 7-class fetal brain segmentation and gestational-age-conditioned Z-score reporting.**
