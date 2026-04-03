@@ -34,16 +34,16 @@ The engine expects the standard nnU-Net directory structure: Dataset501_FetalBra
   --weights /path/to/unzipped/AutoFetal7_Weights \
   --ga 28.5
   ```
-4. Segmented Anatomical Classes
+4. Segmented Anatomical Classes:
    The model outputs a multi-label NIfTI mask with the following label indices:
-   eCSF (Extra-axial Cerebrospinal Fluid)
-   Cortical Gray Matter
-   White Matter (including Developmental Zones)
-   Ventricles
-   CavumCerebellumDeep Gray Matter (incl. Ganglionic Eminence)
+   eCSF (Extra-axial Cerebrospinal Fluid),
+   Cortical Gray Matter,
+   White Matter (including Developmental Zones),
+   Ventricles.
+   CavumCerebellumDeep Gray Matter (incl. Ganglionic Eminence) and
    Brainstem
    
-5. Performance MetricsValidated on a held-out Zurich cohort (N=16) and the Fidon SBA Atlas.Mean Dice Similarity Coefficient (DSC): 0.828Top Performance: Ventricles (DSC 0.94)Metric Details: See metrics/dice score.txt for per-class breakdown.
+5. Performance Metrics Validated on a held-out Zurich cohort (N=16) and the Fidon SBA Atlas.Mean Dice Similarity can be Seen in dice score.txt for per-class breakdown.
 
 6. Citations: If you use this tool in your research, please cite:nnU-Net: Isensee, F., et al. (2021). Nature Methods.FeTA Dataset: Payette, K., et al. (2024).Normative Atlas: Gholipour, A., et al. (2017). Scientific Reports.
 
