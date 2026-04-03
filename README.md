@@ -40,20 +40,20 @@ python inference.py \
 4. Segmented Anatomical Classes
 The model outputs a multi-label NIfTI mask with the following label indices:
 
- 1.eCSF (Extra-axial Cerebrospinal Fluid)
+   1.eCSF (Extra-axial Cerebrospinal Fluid)
 
- 2.Cortical Gray Matter
+   2.Cortical Gray Matter
 
- 3.White Matter (including Developmental Zones)
+   3.White Matter (including Developmental Zones)
 
- 4.Ventricles and Cavum
+   4.Ventricles and Cavum
 
- 5.Cerebellum
+   5.Cerebellum
 
- 6.Deep Gray Matter (incl. Ganglionic Eminence)
+   6.Deep Gray Matter (incl. Ganglionic Eminence)
 
- 7.Brainstem
-
+   7.Brainstem
+ 
 5. Three-Tier Validation & Performance
 The pipeline was validated through a three-tier clinical framework:
 
