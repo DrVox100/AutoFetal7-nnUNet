@@ -11,6 +11,24 @@ Validated for gestational ages **22.6–33.0 weeks**. This tool provides automat
 ## ⚠️ DEPLOYMENT GUARDRAIL
 > **DOMAIN SHIFT WARNING:** AutoFetal-7 was trained exclusively on GE 1.5T/3T acquisition data (FeTA 2024). Application to non-GE platforms (e.g., Siemens 3T) will result in systematic underestimation of **Brainstem** (mean Z = -2.91) and **Cerebellum** (mean Z = -2.24) volumes. Do not use these specific Z-scores for clinical decision-making in heterogeneous environments without local scanner calibration.
 
+## ⚠️ Clinical Data Requirements: Gestational Age (GA)
+Because NIfTI (`.nii.gz`) conversion strips DICOM metadata, the AutoFetal-7 pipeline requires the Gestational Age (in weeks) to be manually passed via the `--ga` flag. 
+
+**How to source the GA:**
+1. Extract it directly from the patient's EHR/clinical notes prior to NIfTI conversion.
+2. Calculate it from the **Last Menstrual Period (LMP)** DICOM tag `(0018, 1012)` if your PACS supports it.
+3. Use the fetal biometric ultrasound consensus date if MRI is performed on the same day.
+
+*Failure to provide an accurate GA will result in mathematically invalid Z-scores.*
+
+## 📊 Automated Clinical Reporting
+The pipeline does not just output NIfTI masks. Upon successful inference, it automatically executes a volumetric parcellation and generates a deployment-ready clinical dashboard.
+
+**Outputs generated in your `--output` folder:**
+1. `FETA_ID.nii.gz`: The 7-class 3D segmentation mask.
+2. `AutoFetal7_Clinical_Report.csv`: Raw volumes (mm³) and Harvard CRL Z-scores.
+3. `AutoFetal7_Visual_Report.png`: An automated plotting dashboard that overlays the patient's specific brain volumes onto the normative growth curves for immediate visual anomaly detection.
+
 ---
 
 ## 1. Installation
