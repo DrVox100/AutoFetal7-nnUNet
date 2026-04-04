@@ -1,6 +1,6 @@
 """
 AutoFetal-7: 3D Fetal Brain Volumetry & Z-Score Engine
-Clinical Inference Monolith
+Clinical Inference Monolith v1.0
 """
 
 import os
@@ -59,6 +59,23 @@ class AutoFetalInference:
         logging.warning("underestimation of Brainstem and Cerebellum volumes due to domain shift.")
         logging.warning("Do not use Brainstem/Cerebellum Z-scores independently in heterogeneous environments.")
         logging.warning("="*75)
+
+    def pre_flight_io_check(self):
+        """Validates that external users formatted their input files correctly."""
+        logging.info("Running pre-flight I/O validation...")
+        input_files = list(self.input_dir.glob("*.nii*"))
+        
+        if not input_files:
+            logging.error(f"CRITICAL: No NIfTI files found in {self.input_dir}")
+            sys.exit(1)
+            
+        for f in input_files:
+            if not f.name.endswith("_0000.nii.gz"):
+                logging.error(f"CRITICAL FORMAT ERROR: File '{f.name}' is invalid.")
+                logging.error("nnU-Net strictly requires all input files to end with '_0000.nii.gz'.")
+                logging.error(f"Please rename '{f.name}' to '{f.name.split('.')[0]}_0000.nii.gz' and rerun.")
+                sys.exit(1)
+        logging.info("Pre-flight check passed. All files formatted correctly.")
 
     def run_nnunet_prediction(self):
         """Executes the nnU-Net v2 prediction via subprocess with isolated environment."""
@@ -159,7 +176,7 @@ class AutoFetalInference:
     def _get_dynamic_std(self, class_name: str, expected_volume_mm3: float) -> float:
         """
         Calculates standard deviation dynamically using the Coefficient of Variation (CV).
-        This replaces the flawed static std_map to ensure variance scales with gestational age.
+        Ensures variance scales appropriately with gestational age.
         """
         cv_map = {
             "eCSF": 0.15,
@@ -234,6 +251,7 @@ class AutoFetalInference:
 
     def execute(self, ga_weeks: float):
         """Master execution block."""
+        self.pre_flight_io_check()
         self.clinical_safety_check()
         self.run_nnunet_prediction()
         self.extract_volumes_and_zscores(ga_weeks=ga_weeks)
