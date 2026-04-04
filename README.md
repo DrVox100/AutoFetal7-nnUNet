@@ -35,9 +35,10 @@ The pipeline does not just output NIfTI masks. Upon successful inference, it aut
 Ensure you have `conda` or `pip` installed. Clone the repository and install the strict environment dependencies:
 
 ```bash
-git clone [https://github.com/DrVox100/AutoFetal7-nnUNet.git](https://github.com/DrVox100/AutoFetal7-nnUNet.git)
-cd AutoFetal7-nnUNet
-pip install -r requirements.txt
+%cd /workspace
+!git clone https://github.com/DrVox100/AutoFetal7-nnUNet.git
+%cd AutoFetal7-nnUNet
+!pip install -r requirements.txt
 ```
 2. Download Model Weights (Zenodo)
 The trained nnU-Net v2 weights (244 MB) are hosted securely on Zenodo to ensure academic traceability.
