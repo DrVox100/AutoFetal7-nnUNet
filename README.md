@@ -4,7 +4,9 @@
 
 Validated for gestational ages **22.6–33.0 weeks**. This tool provides automated volumetric analysis and normative comparisons to aid in the quantitative assessment of fetal neurodevelopment.
 
+![AutoFetal-7 Segmentation Sample](Harvard_derived_Normative_Growth_Charts.png)
 ![AutoFetal-7 Segmentation Sample](Harvard_sample.jpg)
+![AutoFetal-7 Segmentation Sample](Kyriakopoulou_Comparison_Figure_FINAL.png)
 
 ---
 
